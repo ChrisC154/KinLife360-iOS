@@ -104,8 +104,8 @@ app.post("/api/log-location", async (req, res) => {
   try {
     const knownLocation = findNearestLocation(latitude, longitude);
     const message = knownLocation 
-      ? `📍**<Automated Update:** *[user] is ${knownLocation}>*`
-      : `📍**<Automated Update:** *[user] is in transit.>*`;
+      ? `📍**<Automated Update:** *Chris is ${knownLocation}>*`
+      : `📍**<Automated Update:** *Chris is in transit.>*`;
 
     await sendMessage(message);
     console.log(`[${ts}] Sent message: "${message}"`);
